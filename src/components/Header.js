@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React, { useState, useEffect } from "react";
 
 const slides = [
@@ -36,9 +36,10 @@ const Header = () => {
   }, [length]);
 
   return (
-
-    <header className="relative w-full h-[90vh] overflow-hidden" id="home">
-        
+    <header
+      className="relative w-full h-[100vh] overflow-hidden pt-24"
+      id="home"
+    >
       {slides.map((slide, index) => (
         <div
           key={index}
