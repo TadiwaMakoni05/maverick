@@ -6,7 +6,7 @@ const slides = [
     image: "/OIP.jpeg",
     title: "Modern Aluminium Interiors Crafted to Perfection",
     subtitle:
-      "Bring a sleek, modern touch to your home with premium aluminium doors, windows, and interiors.",
+      "A diversified engineering company that specializes in all Aluminum and Glass products, General carpentry works and Steel fixtures.",
   },
   {
     image: "/c5b8a6fc9840f5503d7fd05a7c2905ac.jpg",
@@ -83,36 +83,3 @@ const Header = () => {
 };
 
 export default Header;
-
-// import React from "react";
-
-// const Header = () => {
-//   return (
-//     <header
-//       className="relative w-full h-[90vh] bg-cover bg-center bg-no-repeat"
-//       style={{ backgroundImage: "url('/OIP.jpeg')" }}
-//     >
-//       {/* Gradient overlay */}
-//       <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/80"></div>
-
-//       {/* Text overlay - left-aligned */}
-//       <div className="absolute inset-0 flex flex-col items-start justify-center px-6 md:px-12 space-y-6">
-//         <h1 className="text-white text-3xl md:text-5xl font-bold max-w-2xl leading-tight">
-//           Modern Aluminium Interiors Crafted to Perfection
-//         </h1>
-//         <p className="text-white text-sm md:text-xl lg:text:2xl  max-w-2xl">
-//           Bring a sleek, modern touch to your home with premium aluminium doors, windows, and interiors.
-//           Our solutions combine beauty and resilience, perfectly tailored to your lifestyle and space.
-//         </p>
-//         <a
-//           href="#"
-//           className="bg-transparent  border text-white px-6 py-3 text-sm md:text-lg font-semibold hover:bg-black hover:text-white transition duration-300">
-//             Get Started
-//           </a>
-//       </div>
-//     </header>
-
-//   );
-// };
-
-// export default Header;
