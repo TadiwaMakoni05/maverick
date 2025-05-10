@@ -1,5 +1,5 @@
-import {  LucideLocationEdit, Mail, Phone } from "lucide-react";
-import Image from "next/image";
+import { Mail, Phone } from "lucide-react";
+
 import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { BsFillGeoAltFill } from "react-icons/bs";
@@ -13,18 +13,25 @@ const Footer = () => {
             <div className="mb-4">
               <h1 className="text-2xl font-bold">Maverick</h1>
               <p className="text-gray-400">
-               Bring a sleek, modern touch to your home with premium aluminium doors, windows, and interiors.
+                Bring a sleek, modern touch to your home with premium aluminium
+                doors, windows, and interiors.
               </p>
             </div>
             <div className="flex space-x-4 mt-4">
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a
+                href="mailto:tadiwa.makoni13@gmail.com"
+                className="text-gray-400 hover:text-white"
+              >
                 <Mail />
               </a>
-              <a href="#" className="text-gray-400 hover:text-white">
+              <a
+                href="tel:+263772675611"
+                className="text-gray-400 hover:text-white"
+              >
                 <Phone />
               </a>
               <a href="#" className="text-gray-400 hover:text-white">
-                <FaWhatsapp  className="text-2xl"/>
+                <FaWhatsapp className="text-2xl" />
               </a>
             </div>
           </div>
@@ -59,20 +66,38 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Get In Touch</h4>
             <ul className="space-y-3 text-gray-400">
               <li className="flex items-start">
-                <span className="mr-2"><BsFillGeoAltFill className="text-xl"/></span> 2443 Oak Ridge Omaha, GA 45065
+                <span className="mr-2">
+                  <BsFillGeoAltFill className="text-xl" />
+                </span>{" "}
+                2443 Oak Ridge Omaha, GA 45065
               </li>
               <li className="flex items-center">
-                <a href="tel:+26377534789" target="_blank" className="mr-2"><Phone /> +263 772 534 789</a>
+                <a href="tel:+263772675611" target="_blank" className="mr-2">
+                  <Phone /> +263 772 675 611
+                </a>
               </li>
               <li className="flex items-center">
-                <a href="mailto:maverick@work.co.zw" target="_blank" className="mr-2"><Mail /> maverick@work.co.zw</a>
+                <a
+                  href="mailto:tadiwa.makoni13@gmail.com"
+                  target="_blank"
+                  className="mr-2"
+                >
+                  <Mail /> tadiwa.makoni13@gmail.com
+                </a>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="text-center text-gray-500 text-xs mt-10">
-          Copyright © 2025 Maverick | Developed by{" "}<a href="https://github.com/TadiwaMakoni05/" target="_blank" className="text-white font-bold">Tadiwanashe Makoni</a>
+          Copyright © 2025 Maverick | Developed by{" "}
+          <a
+            href="https://github.com/TadiwaMakoni05/"
+            target="_blank"
+            className="text-white font-bold"
+          >
+            Tadiwanashe Makoni
+          </a>
         </div>
       </footer>
     </div>
