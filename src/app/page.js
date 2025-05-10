@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import React from "react";
 import About from "@/components/About";
 import Services from "@/components/Services";
-// import Projects from "@/components/Projects";
+import Projects from "@/components/Projects";
 import ContactUs from "@/components/ContactUs";
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
       <Header />
       <About />
       <Services />
-      {/* <Projects /> */}
+      <Projects />
       <ContactUs />
 
       <Footer />
