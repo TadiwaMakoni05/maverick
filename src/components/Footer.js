@@ -7,7 +7,7 @@ import { BsFillGeoAltFill } from "react-icons/bs";
 const Footer = () => {
   return (
     <div>
-      <footer className="bg-black text-white py-12">
+      <footer className="w-full bg-black text-white py-12">
         <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-8 text-sm">
           <div>
             <div className="mb-4">
