@@ -33,22 +33,22 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Navigation</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="#home" className="hover:text-white">
                   Home
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="#about" className="hover:text-white">
                   About
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="#services" className="hover:text-white">
                   Service
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-white">
+                <a href="#contact" className="hover:text-white">
                   Contact
                 </a>
               </li>
@@ -62,10 +62,10 @@ const Footer = () => {
                 <span className="mr-2"><BsFillGeoAltFill className="text-xl"/></span> 2443 Oak Ridge Omaha, GA 45065
               </li>
               <li className="flex items-center">
-                <span className="mr-2"><Phone /></span> +263 772 534 789
+                <a href="tel:+26377534789" target="_blank" className="mr-2"><Phone /> +263 772 534 789</a>
               </li>
               <li className="flex items-center">
-                <span className="mr-2"><Mail /></span> maverick@work.co.zw
+                <a href="mailto:maverick@work.co.zw" target="_blank" className="mr-2"><Mail /> maverick@work.co.zw</a>
               </li>
             </ul>
           </div>
