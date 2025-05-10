@@ -21,6 +21,9 @@ const NavBar = () => {
           <a href="#services" className="hover:text-gray-300">
             Services
           </a>
+          <a href="#projects" className="hover:text-gray-300">
+            Projects
+          </a>
           <a href="#contact" className="hover:text-gray-300">
             Contact
           </a>

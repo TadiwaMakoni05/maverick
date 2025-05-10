@@ -9,7 +9,7 @@ const ContactUs = () => {
         <h4 className="text-gray-400 text-sm">Contact Us</h4>
         <h2 className="text-3xl font-bold mb-6">Get In Touch</h2>
 
-        <form className="space-y-2">
+        <form className="space-y-16">
           <div>
             <input
               type="text"
