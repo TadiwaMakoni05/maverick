@@ -69,10 +69,7 @@ This project is licensed under the MIT License – see the [LICENSE](LICENSE) fi
 * **Next.js** – For the React framework and SSR functionality.
 * **TailwindCSS** – For the utility-first CSS framework.
 
-```
 
-This `README.md` provides a clear overview of your project, setup instructions, and basic information about the structure and tools used. Feel free to customize it based on your specific implementation!
-```
 For questions, suggestions, or improvements, feel free to open an issue.
 
 Made with ❤️ using Next.js and Tailwind CSS.
