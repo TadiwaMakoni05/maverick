@@ -4,12 +4,12 @@ import { BsFillGeoAltFill } from "react-icons/bs";
 import { Mail, Phone } from "lucide-react";
 const ContactUs = () => {
   return (
-    <section className="max-w-5xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10">
+    <section className="w-full px-6 py-16 grid md:grid-cols-2 gap-10" id="contact">
       <div className="bg-white p-8 shadow-md">
         <h4 className="text-gray-400 text-sm">Contact Us</h4>
         <h2 className="text-3xl font-bold mb-6">Get In Touch</h2>
 
-        <form className="space-y-4">
+        <form className="space-y-2">
           <div>
             <input
               type="text"
@@ -52,23 +52,31 @@ const ContactUs = () => {
           services, want to request a quote, or just want to say hello — our
           team is ready to help you.
         </p>
-        <div className="space-y-10 grid grid-cols-1 items-center justify-between md:grid-cols-2 gap-4 text-sm">
-          <div className="flex items-center space-x-2 p-2 w-64 flex-col">
+        <div className="space-y-10 grid grid-cols-2 items-center justify-between md:grid-cols-2 gap-4 text-sm">
+          <div className="flex items-center space-x-2 p-2 w-full max-w-xs flex-col">
             <span>
               <Phone />
             </span>
             <span className="text-lg text-black">Phone Number</span>
-            <a href="tel:+26377534789" target="_blank" className="text-sm">+263 772 534 789</a>
+            <a href="tel:+26377534789" target="_blank" className="text-sm">
+              +263 772 534 789
+            </a>
           </div>
-          <div className="flex items-center space-x-2 p-2 w-64 flex-col">
+          <div className="flex items-center space-x-2 p-2 w-full max-w-xs flex-col">
             <span>
               <Mail />
             </span>
             <span className="text-lg text-black">Email Address</span>
 
-            <a href="mailto:maverick@work.co.zw" target="_blank" className="text-sm">maverick@work.co.zw</a>
+            <a
+              href="mailto:maverick@work.co.zw"
+              target="_blank"
+              className="text-sm"
+            >
+              maverick@work.co.zw
+            </a>
           </div>
-          <div className="flex items-center space-x-2 p-2 w-64 flex-col">
+          <div className="flex items-center space-x-2 p-2 w-full max-w-xs flex-col">
             <span>
               <FaWhatsapp className="text-2xl" />
             </span>
@@ -76,7 +84,7 @@ const ContactUs = () => {
 
             <span className="text-sm">+263 776 5324</span>
           </div>
-          <div className="flex items-center space-x-2 p-2 w-64 flex-col">
+          <div className="flex items-center space-x-2 p-2 w-full max-w-xs flex-col">
             <span>
               <BsFillGeoAltFill className="text-2xl" />
             </span>
@@ -89,8 +97,7 @@ const ContactUs = () => {
         <div className="mt-6">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29700.118110369673!2d31.21511186604702!3d-17.90634097951124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931bf946d8ce9d9%3A0x1af496e0412ec332!2sRuwa!5e1!3m2!1sen!2szw!4v1746834516899!5m2!1sen!2szw"
-            width="600"
-            height="300"
+            className="w-full h-[300px]"
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"
