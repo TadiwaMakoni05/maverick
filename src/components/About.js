@@ -4,7 +4,10 @@ import React from "react";
 const About = () => {
   return (
     <div>
-      <section className="grid md:grid-cols-2 items-center px-20 py-16 bg-white relative" id="about">
+      <section
+        className="w-full grid md:grid-cols-2 items-center px-6 md:px-20 py-16 bg-white relative"
+        id="about"
+      >
         <div className="max-w-xl">
           <h4 className="uppercase text-sm tracking-widest text-gray-500 mb-2">
             About Us
@@ -23,7 +26,7 @@ const About = () => {
         </div>
         <div className="hidden md:block">
           <Image
-            src='/c5b8a6fc9840f5503d7fd05a7c2905ac.jpg'
+            src="/c5b8a6fc9840f5503d7fd05a7c2905ac.jpg"
             alt="Sofa"
             width={300}
             height={600}
