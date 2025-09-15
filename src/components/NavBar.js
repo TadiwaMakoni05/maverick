@@ -57,7 +57,7 @@ const NavBar = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden mt-4 flex flex-col w-full space-y-4 px-6 bg-white text-black  shadow-lg">
+        <div className="md:hidden mt-4 flex flex-col w-full space-y-4 px-6 py-4 bg-white text-black  shadow-lg">
           <Link href="/" className="hover:opacity-70">
             Home
           </Link>
