@@ -56,9 +56,7 @@ Open your browser and navigate to `http://localhost:3000` to see the website in 
 
 TailwindCSS is configured in the `tailwind.config.js` file. You can customize the design system, colors, spacing, and more here.
 
-## Contributing
 
-Feel free to fork this project and submit a pull request for any improvements, bug fixes, or additional features. Please ensure that your code follows the existing code style and includes appropriate tests.
 
 ## License
 
