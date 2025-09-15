@@ -59,7 +59,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="relative group ooverflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+              className="relative group overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer"
               onClick={() => setSelectedIndex(index)}
             >
               <Image
