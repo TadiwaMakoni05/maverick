@@ -36,30 +36,32 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
-      <main className="min-h-screen bg-white py-24 px-6">
-        <div className="max-w-5xl mx-auto space-y-16">
-          {/* Heading */}
-          <section className="text-center">
-            <h1 className="text-5xl font-bold text-gray-800 mb-4">
-              Our Services
-            </h1>
-            <p className="text-gray-500 text-lg">
-              We provide precision-engineered aluminium solutions for residential,
-              commercial, and industrial projects.
-            </p>
-          </section>
+      {/* Hero Banner */}
+      <section className="relative w-full bg-black text-white py-32 px-6 text-center">
+        <div className="max-w-3xl mx-auto">
+          <h1 className="text-5xl font-bold mb-4">Our Services</h1>
+          <p className="text-lg text-gray-200">
+            Explore our wide range of precision-engineered aluminium solutions for residential, commercial, and industrial projects.
+          </p>
+        </div>
+      </section>
 
+      <main className="min-h-screen bg-gray-50 py-24 px-6">
+        <div className="max-w-6xl mx-auto space-y-20">
           {/* Services Grid */}
           <section className="grid grid-cols-1 md:grid-cols-2 gap-12">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="p-6 border border-gray-100  shadow-sm hover:shadow-md transition duration-300"
+                className="p-6 border-l-4 border-gray-800 bg-white shadow hover:shadow-lg hover:scale-[1.02] transition-transform duration-300 cursor-pointer "
               >
-                <h2 className="text-2xl font-semibold text-gray-800 mb-2">
-                  {service.title}
-                </h2>
-                <p className="text-gray-600">{service.description}</p>
+                <div className="flex items-center mb-3">
+                  <div className="w-1 h-6 bg-gray-800 mr-3"></div>
+                  <h2 className="text-2xl font-semibold text-gray-900">
+                    {service.title}
+                  </h2>
+                </div>
+                <p className="text-gray-700">{service.description}</p>
               </div>
             ))}
           </section>
