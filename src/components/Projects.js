@@ -48,7 +48,7 @@ export default function Projects() {
           <h2 className="text-4xl font-bold text-gray-800">Our Projects</h2>
           <Link
             href="/projects"
-            className="border border-black text-black px-6 py-2 rounded-full text-sm font-medium hover:bg-black hover:text-white transition duration-300"
+            className="border border-black text-black px-6 py-2 o text-sm font-medium hover:bg-black hover:text-white transition duration-300"
           >
             More Projects
           </Link>
@@ -59,7 +59,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="relative group rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+              className="relative group ooverflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer"
               onClick={() => setSelectedIndex(index)}
             >
               <Image
@@ -82,7 +82,7 @@ export default function Projects() {
       {/* Lightbox Modal */}
       {selected && (
         <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-6">
-          <div className="relative max-w-3xl w-full bg-white rounded-xl overflow-hidden shadow-lg">
+          <div className="relative max-w-3xl w-full bg-white overflow-hidden shadow-lg">
             {/* Close button */}
             <button
               onClick={closeModal}

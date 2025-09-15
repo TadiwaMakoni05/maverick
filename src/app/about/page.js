@@ -13,7 +13,7 @@ export default function AboutPage() {
           <div className="mb-8">
             <Link
               href="/"
-              className="inline-block bg-black text-white px-6 py-2 rounded-full text-sm font-medium hover:bg-gray-800 transition"
+              className="inline-block bg-black text-white px-6 py-2  text-sm font-medium hover:bg-gray-800 transition"
             >
               &larr; Back to Home
             </Link>
@@ -76,7 +76,7 @@ export default function AboutPage() {
                 src="/p3.jpg"
                 alt="Our Mission"
                 fill
-                className="rounded-lg object-cover"
+                className=" object-cover"
                 priority
               />
             </div>
@@ -89,7 +89,7 @@ export default function AboutPage() {
                 src="/p1.jpg"
                 alt="Our Vision"
                 fill
-                className="rounded-lg object-cover"
+                className=" object-cover"
                 priority
               />
             </div>

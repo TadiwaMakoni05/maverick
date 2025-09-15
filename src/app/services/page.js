@@ -54,7 +54,7 @@ export default function ServicesPage() {
             {services.map((service, index) => (
               <div
                 key={index}
-                className="p-6 border border-gray-100 rounded-lg shadow-sm hover:shadow-md transition duration-300"
+                className="p-6 border border-gray-100  shadow-sm hover:shadow-md transition duration-300"
               >
                 <h2 className="text-2xl font-semibold text-gray-800 mb-2">
                   {service.title}

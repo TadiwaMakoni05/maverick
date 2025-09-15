@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
 import { BsFillGeoAltFill } from "react-icons/bs";
 import { Mail, Phone } from "lucide-react";
-
+import Footer from "@/components/Footer";
 const ContactUs = () => {
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
@@ -38,13 +38,14 @@ Message: ${message}`;
   };
 
   return (
+    <>
     <main className="min-h-screen w-full bg-gray-50 flex items-center justify-center px-6 py-16 relative">
 
 
       <section className="w-full max-w-6xl grid lg:grid-cols-2 gap-10">
         
         {/* LEFT: CONTACT FORM */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 lg:p-12">
+        <div className="bg-white  shadow-lg p-8 lg:p-12">
           <h4 className="text-gray-500 text-sm tracking-wide">CONTACT US</h4>
           <h2 className="text-3xl font-bold mb-8">Let’s Talk</h2>
 
@@ -54,33 +55,33 @@ Message: ${message}`;
               name="name"
               placeholder="Your Name..."
               required
-              className="w-full px-4 py-4 bg-gray-100 text-black rounded-xl border border-gray-200 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
+              className="w-full px-4 py-4 bg-gray-100 text-black  border border-gray-200 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
             />
             <input
               type="email"
               name="email"
               placeholder="example@yourmail.com"
               required
-              className="w-full px-4 py-4 bg-gray-100 text-black rounded-xl border border-gray-200 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
+              className="w-full px-4 py-4 bg-gray-100 text-black  border border-gray-200 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
             />
             <input
               type="text"
               name="subject"
               placeholder="Subject..."
               required
-              className="w-full px-4 py-4 bg-gray-100 text-black rounded-xl border border-gray-200 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
+              className="w-full px-4 py-4 bg-gray-100 text-black  border border-gray-200 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
             />
             <textarea
               rows={5}
               name="message"
               placeholder="Write your message..."
               required
-              className="w-full px-4 py-4 bg-gray-100 text-black rounded-xl border border-gray-200 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
+              className="w-full px-4 py-4 bg-gray-100 text-black  border border-gray-200 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-black"
             ></textarea>
             <button
               type="submit"
               disabled={sending || sent}
-              className={`w-full px-5 py-4 rounded-xl font-semibold transition ${
+              className={`w-full px-5 py-4  font-semibold transition ${
                 sent
                   ? "bg-green-600 text-white"
                   : "bg-black text-white hover:bg-gray-800"
@@ -106,7 +107,7 @@ Message: ${message}`;
 
             <div className="grid grid-cols-2 gap-6">
               {/* Phone */}
-              <div className="flex flex-col items-center p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition">
+              <div className="flex flex-col items-center p-4 bg-white  shadow-md hover:shadow-lg transition">
                 <Phone className="text-black mb-2" />
                 <h3 className="font-semibold">Phone</h3>
                 <a
@@ -118,7 +119,7 @@ Message: ${message}`;
               </div>
 
               {/* Email */}
-              <div className="flex flex-col items-center p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition">
+              <div className="flex flex-col items-center p-4 bg-white  shadow-md hover:shadow-lg transition">
                 <Mail className="text-black mb-2" />
                 <h3 className="font-semibold">Email</h3>
                 <a
@@ -130,14 +131,14 @@ Message: ${message}`;
               </div>
 
               {/* WhatsApp */}
-              <div className="flex flex-col items-center p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition">
+              <div className="flex flex-col items-center p-4 bg-white  shadow-md hover:shadow-lg transition">
                 <FaWhatsapp className="text-green-500 text-2xl mb-2" />
                 <h3 className="font-semibold">WhatsApp</h3>
                 <a href="" className="text-gray-600 text-sm">+263 776 5324</a>
               </div>
 
               {/* Office */}
-              <div className="flex flex-col items-center p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition">
+              <div className="flex flex-col items-center p-4 bg-white  shadow-md hover:shadow-lg transition">
                 <BsFillGeoAltFill className="text-red-500 text-2xl mb-2" />
                 <h3 className="font-semibold">Office</h3>
                 <span className="text-gray-600 text-sm text-center">
@@ -151,7 +152,7 @@ Message: ${message}`;
           <div className="mt-8">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29700.118110369673!2d31.21511186604702!3d-17.90634097951124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931bf946d8ce9d9%3A0x1af496e0412ec332!2sRuwa!5e1!3m2!1sen!2szw!4v1746834516899!5m2!1sen!2szw"
-              className="w-full h-[300px] rounded-xl shadow-md"
+              className="w-full h-[300px]  shadow-md"
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
@@ -162,6 +163,8 @@ Message: ${message}`;
         </div>
       </section>
     </main>
+    <Footer />
+    </>
   );
 };
 

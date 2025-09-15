@@ -93,7 +93,7 @@ export default function ProjectsPage() {
         <div className="mb-8">
           <Link
             href="/"
-            className="inline-block px-6 py-2 text-sm font-medium border border-black rounded-full hover:bg-black hover:text-white transition"
+            className="inline-block px-6 py-2 text-sm font-medium border border-black  hover:bg-black hover:text-white transition"
           >
             ← Back to Home
           </Link>
@@ -112,7 +112,7 @@ export default function ProjectsPage() {
           {allProjects.map((project, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition duration-300 h-72"
+              className="group relative overflow-hidden shadow-sm hover:shadow-lg transition duration-300 h-72"
               onClick={() => setSelectedIndex(index)}
             >
               {/* Image fills the parent container */}
@@ -138,7 +138,7 @@ export default function ProjectsPage() {
       {/* Modal */}
       {selectedIndex !== null && (
         <div className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-6">
-          <div className="relative max-w-4xl w-full bg-white rounded-xl overflow-hidden shadow-lg">
+          <div className="relative max-w-4xl w-full bg-white overflow-hidden shadow-lg">
             {/* Close button */}
             <button
               onClick={closeModal}
@@ -150,13 +150,13 @@ export default function ProjectsPage() {
             {/* Prev/Next buttons */}
             <button
               onClick={showPrev}
-              className="absolute top-1/2 left-4 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white p-2 rounded-full transition z-50"
+              className="absolute top-1/2 left-4 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white p-2  transition z-50"
             >
               <ChevronLeft size={28} />
             </button>
             <button
               onClick={showNext}
-              className="absolute top-1/2 right-4 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white p-2 rounded-full transition z-50"
+              className="absolute top-1/2 right-4 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white p-2  transition z-50"
             >
               <ChevronRight size={28} />
             </button>
