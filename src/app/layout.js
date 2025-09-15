@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Maverick",
-  description: "",
+  title: "Maverick Global Fitters",
+  description: "Manufacturers of all Aluminum and Glass products. Specialists in Shopfronts, Doors. Framed and frameless cubicles, Staircase Glasses",
 };
 
 export default function RootLayout({ children }) {
