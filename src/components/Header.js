@@ -58,7 +58,7 @@ const Header = () => {
               {slide.subtitle}
             </p>
             <a
-              href="#"
+              href="#contact"
               className="bg-transparent border text-white px-6 py-3 text-sm md:text-lg font-semibold hover:bg-black hover:text-white transition duration-300"
             >
               Get Started
