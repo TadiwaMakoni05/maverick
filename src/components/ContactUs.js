@@ -58,8 +58,8 @@ const ContactUs = () => {
               <Phone />
             </span>
             <span className="text-lg text-black">Phone Number</span>
-            <a href="tel:+26377534789" target="_blank" className="text-sm">
-              +263 772 534 789
+            <a href="tel:+263772675611" target="_blank" className="text-sm">
+              +263 772 675 611
             </a>
           </div>
           <div className="flex items-center space-x-2 p-2 w-full max-w-xs flex-col">

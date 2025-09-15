@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-
+import Link from "next/link";
 const About = () => {
   return (
     <div>
@@ -20,13 +20,13 @@ const About = () => {
             a unique atmosphere. We are fully trained and certified in the
             latest comfort technologies to deliver maximum comfort.
           </p>
-          <button className="px-5 py-2 border border-black text-black hover:bg-black hover:text-white transition">
+          <Link href="/about" className="px-5 py-2 border border-black text-black hover:bg-black hover:text-white transition">
             Read More
-          </button>
+          </Link>
         </div>
         <div className="hidden md:block">
           <Image
-            src="/c5b8a6fc9840f5503d7fd05a7c2905ac.jpg"
+            src="/p5.jpg"
             alt="Sofa"
             width={300}
             height={600}

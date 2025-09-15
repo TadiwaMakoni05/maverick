@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
+import Footer from "@/components/Footer";
 
 const allProjects = [
   {
@@ -22,11 +24,52 @@ const allProjects = [
   {
     title: "Retail Store Entrance",
     description:
-      "Automatic sliding aluminum doors designed for a high-traffic retail environment.",
-    image: "/0547c5450099cb1a6ebf0daa6c9db69c.jpg",
-    location: "Abu Dhabi Mall, Abu Dhabi",
+      "Thermally-insulated aluminum windows for comfort and elegance.",
+    image: "/p1.jpg",
+    location: "Ruwa",
   },
-  // ➕ add more completed projects here
+  {
+    title: "Aluminum Swing Gate",
+    description:
+      "Automatic sliding aluminum doors designed for a high-traffic retail environment.",
+    image: "/p2.jpg",
+    location: "Madokero",
+  },
+  {
+    title: "Public Restroom Cubicle",
+    description:
+      "Hygienic aluminum toilet stalls built for durability and easy maintenance.",
+    image: "/p3.jpg",
+    location: "Madokero",
+  },
+  {
+    title: "Public Restroom Cubicle",
+    description:
+      "Hygienic aluminum toilet stalls built for durability and easy maintenance.",
+    image: "/p4.jpg",
+    location: "Madokero",
+  },
+  {
+    title: "Public Restroom Cubicle",
+    description:
+      "Hygienic aluminum toilet stalls built for durability and easy maintenance.",
+    image: "/p5.jpg",
+    location: "Madokero",
+  },
+  {
+    title: "Public Restroom Cubicle",
+    description:
+      "Hygienic aluminum toilet stalls built for durability and easy maintenance.",
+    image: "/p6.jpg",
+    location: "Madokero",
+  },
+  {
+    title: "Public Restroom Cubicle",
+    description:
+      "Hygienic aluminum toilet stalls built for durability and easy maintenance.",
+    image: "/p7.jpg",
+    location: "Madokero",
+  },
 ];
 
 export default function ProjectsPage() {
@@ -43,8 +86,19 @@ export default function ProjectsPage() {
     );
 
   return (
+    <>
     <main className="min-h-screen bg-white py-24 px-6">
       <div className="max-w-7xl mx-auto">
+        {/* Back Button */}
+        <div className="mb-8">
+          <Link
+            href="/"
+            className="inline-block px-6 py-2 text-sm font-medium border border-black rounded-full hover:bg-black hover:text-white transition"
+          >
+            ← Back to Home
+          </Link>
+        </div>
+
         {/* Heading */}
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-gray-800 mb-3">Our Projects</h1>
@@ -54,20 +108,22 @@ export default function ProjectsPage() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 cursor-pointer">
           {allProjects.map((project, index) => (
             <div
               key={index}
-              className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition duration-300 cursor-pointer"
+              className="group relative overflow-hidden rounded-xl shadow-sm hover:shadow-lg transition duration-300 h-72"
               onClick={() => setSelectedIndex(index)}
             >
-              <Image
-                src={project.image}
-                alt={project.title}
-                width={600}
-                height={400}
-                className="w-full h-72 object-cover transition-transform duration-300 group-hover:scale-105"
-              />
+              {/* Image fills the parent container */}
+              <div className="relative w-full h-full">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
 
               {/* Overlay */}
               <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4 text-white">
@@ -86,7 +142,7 @@ export default function ProjectsPage() {
             {/* Close button */}
             <button
               onClick={closeModal}
-              className="absolute top-4 right-4 text-white hover:text-red-500 transition"
+              className="absolute top-4 right-4 text-red-400 hover:text-red-500 transition z-50"
             >
               <X size={28} />
             </button>
@@ -94,25 +150,27 @@ export default function ProjectsPage() {
             {/* Prev/Next buttons */}
             <button
               onClick={showPrev}
-              className="absolute top-1/2 left-4 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white p-2 rounded-full transition"
+              className="absolute top-1/2 left-4 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white p-2 rounded-full transition z-50"
             >
               <ChevronLeft size={28} />
             </button>
             <button
               onClick={showNext}
-              className="absolute top-1/2 right-4 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white p-2 rounded-full transition"
+              className="absolute top-1/2 right-4 -translate-y-1/2 bg-black/40 hover:bg-black/70 text-white p-2 rounded-full transition z-50"
             >
               <ChevronRight size={28} />
             </button>
 
             {/* Modal content */}
-            <Image
-              src={allProjects[selectedIndex].image}
-              alt={allProjects[selectedIndex].title}
-              width={900}
-              height={500}
-              className="w-full h-[450px] object-cover"
-            />
+            <div className="relative w-full h-[450px]">
+              <Image
+                src={allProjects[selectedIndex].image}
+                alt={allProjects[selectedIndex].title}
+                fill
+                className="object-cover"
+              />
+            </div>
+
             <div className="p-6">
               <h3 className="text-2xl font-bold mb-2">
                 {allProjects[selectedIndex].title}
@@ -127,6 +185,9 @@ export default function ProjectsPage() {
           </div>
         </div>
       )}
+  
     </main>
+        <Footer/>
+        </>
   );
 }
