@@ -14,32 +14,32 @@ const ContactUs = () => {
             <input
               type="text"
               placeholder="Your Name..."
-              className="w-full px-4 py-2 bg-gray-100 text-black rounded border border-gray-100 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+              className="w-full px-4 py-4 bg-gray-100 text-black rounded border border-gray-100 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
             />
           </div>
           <div>
             <input
               type="email"
               placeholder="example@yourmail.com"
-              className="w-full px-4 py-2 bg-gray-100 text-black rounded border border-gray-100 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+              className="w-full px-4 py-4 bg-gray-100 text-black rounded border border-gray-100 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
             />
           </div>
           <div>
             <input
               type="text"
               placeholder="Title..."
-              className="w-full px-4 py-2 bg-gray-100 text-black rounded border border-gray-100 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+              className="w-full px-4 py-4 bg-gray-100 text-black rounded border border-gray-100 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
             />
           </div>
           <div>
             <textarea
               rows="4"
               placeholder="Type Here..."
-              className="w-full px-4 py-2 bg-gray-100 text-black rounded border border-gray-100 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
+              className="w-full px-4 py-4 bg-gray-100 text-black rounded border border-gray-100 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
             ></textarea>
           </div>
           <div>
-            <button className="px-5 py-2 border border-black text-black hover:bg-black hover:text-white transition">
+            <button className="px-5 py-4 border border-black text-black hover:bg-black hover:text-white transition">
               Send Now
             </button>
           </div>
