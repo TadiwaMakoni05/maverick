@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-
+import Link from "next/link";
 const slides = [
   {
     image: "/OIP.jpeg",
@@ -62,12 +62,12 @@ const Header = () => {
               {slide.title}
             </h1>
             <p className="text-white text-sm md:text-xl max-w-2xl">{slide.subtitle}</p>
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               className="bg-transparent border text-white px-6 py-3 text-sm md:text-lg font-semibold hover:bg-black hover:text-white transition duration-300"
             >
               Get Started
-            </a>
+            </Link>
           </div>
         </div>
       ))}
