@@ -1,51 +1,98 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import { BsFillGeoAltFill } from "react-icons/bs";
 import { Mail, Phone } from "lucide-react";
+
 const ContactUs = () => {
+  const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const subject = formData.get("subject");
+    const message = formData.get("message");
+
+    const fullMessage = `Hello, my name is ${name}.
+Email: ${email}
+I want you to do a project for me on: ${subject}
+Message: ${message}`;
+
+    const phoneNumber = "263772675611";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      fullMessage
+    )}`;
+
+    setSending(true);
+
+    setTimeout(() => {
+      window.open(whatsappUrl, "_blank");
+      setSending(false);
+      setSent(true);
+    }, 800);
+  };
+
   return (
     <section className="w-full px-6 py-16 grid md:grid-cols-2 gap-10" id="contact">
-      <div className="bg-white p-8 shadow-md">
+      {/* Contact Form */}
+      <div className="bg-white p-8 shadow-md relative">
         <h4 className="text-gray-400 text-sm">Contact Us</h4>
         <h2 className="text-3xl font-bold mb-6">Get In Touch</h2>
 
-        <form className="space-y-16">
+        <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <input
               type="text"
+              name="name"
               placeholder="Your Name..."
+              required
               className="w-full px-4 py-4 bg-gray-100 text-black rounded border border-gray-100 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
             />
           </div>
           <div>
             <input
               type="email"
+              name="email"
               placeholder="example@yourmail.com"
+              required
               className="w-full px-4 py-4 bg-gray-100 text-black rounded border border-gray-100 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
             />
           </div>
           <div>
             <input
               type="text"
+              name="subject"
               placeholder="Title..."
+              required
               className="w-full px-4 py-4 bg-gray-100 text-black rounded border border-gray-100 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
             />
           </div>
           <div>
             <textarea
               rows="4"
+              name="message"
               placeholder="Type Here..."
+              required
               className="w-full px-4 py-4 bg-gray-100 text-black rounded border border-gray-100 placeholder:text-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
             ></textarea>
           </div>
           <div>
-            <button className="px-5 py-4 border border-black text-black hover:bg-black hover:text-white transition">
-              Send Now
+            <button
+              type="submit"
+              disabled={sending || sent}
+              className="px-5 py-4 border border-black text-black hover:bg-black hover:text-white transition w-full"
+            >
+              {sending ? "Sending..." : sent ? "Message Sent ✅" : "Send Message"}
             </button>
           </div>
         </form>
       </div>
 
+      {/* Contact Info */}
       <div>
         <p className="text-black mb-6">
           We’d love to hear from you. Whether you have questions about our
@@ -54,20 +101,15 @@ const ContactUs = () => {
         </p>
         <div className="space-y-10 grid grid-cols-2 items-center justify-between md:grid-cols-2 gap-4 text-sm">
           <div className="flex items-center space-x-2 p-2 w-full max-w-xs flex-col">
-            <span>
-              <Phone />
-            </span>
+            <Phone />
             <span className="text-lg text-black">Phone Number</span>
             <a href="tel:+263772675611" target="_blank" className="text-sm">
               +263 772 675 611
             </a>
           </div>
           <div className="flex items-center space-x-2 p-2 w-full max-w-xs flex-col">
-            <span>
-              <Mail />
-            </span>
+            <Mail />
             <span className="text-lg text-black">Email Address</span>
-
             <a
               href="mailto:maverick@work.co.zw"
               target="_blank"
@@ -77,20 +119,20 @@ const ContactUs = () => {
             </a>
           </div>
           <div className="flex items-center space-x-2 p-2 w-full max-w-xs flex-col">
-            <span>
-              <FaWhatsapp className="text-2xl" />
-            </span>
-            <span className="text-lg text-black">Whatsapp</span>
-
-            <span className="text-sm">+263 776 5324</span>
+            <FaWhatsapp className="text-2xl" />
+            <a
+              href="https://wa.me/263772675611"
+              target="_blank"
+              className="text-lg text-black hover:underline"
+            >
+              Whatsapp
+            </a>
+            <span className="text-sm">+263 772 675 611</span>
           </div>
           <div className="flex items-center space-x-2 p-2 w-full max-w-xs flex-col">
-            <span>
-              <BsFillGeoAltFill className="text-2xl" />
-            </span>
+            <BsFillGeoAltFill className="text-2xl" />
             <span className="text-lg text-black">Our Office</span>
-
-            <span className="text-sm">2443 Oak Ridge Omaha, GA 45065</span>
+            <span className="text-sm">123 Main Street, Harare, Zimbabwe</span>
           </div>
         </div>
 

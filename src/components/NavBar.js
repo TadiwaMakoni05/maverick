@@ -46,9 +46,9 @@ const NavBar = () => {
           <Link href="/projects" className="hover:opacity-70">
             Projects
           </Link>
-          <a href="#contact" className="hover:opacity-70">
+          <Link href="/contact" className="hover:opacity-70">
             Contact
-          </a>
+          </Link>
         </div>
 
         <div className="md:hidden">
@@ -75,9 +75,9 @@ const NavBar = () => {
           <Link href="/projects" className="hover:opacity-70">
             Projects
           </Link>
-          <a href="#contact" className="hover:opacity-70">
+          <Link href="/contact" className="hover:opacity-70">
             Contact
-          </a>
+          </Link>
         </div>
       )}
     </nav>
