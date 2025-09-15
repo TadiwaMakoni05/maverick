@@ -11,7 +11,7 @@ const NavBar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
+      if (window.scrollY > 50) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -25,7 +25,7 @@ const NavBar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 p-6 transition-all duration-300 ${
-        isScrolled ? "bg-white text-black shadow-md" : "bg-black/50 text-white"
+        isScrolled ? "bg-black/40 text-white shadow-md" : "bg-white text-black"
       }`}
     >
       <div className="container mx-auto flex justify-between items-center">
@@ -38,9 +38,9 @@ const NavBar = () => {
           <Link href="/about" className="hover:opacity-70">
             About
           </Link>
-          <a href="#services" className="hover:opacity-70">
+          <Link href="/services" className="hover:opacity-70">
             Services
-          </a>
+          </Link>
           <Link href="/projects" className="hover:opacity-70">
             Projects
           </Link>
@@ -57,16 +57,16 @@ const NavBar = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden mt-4 flex flex-col w-full space-y-4 px-6 py-4 bg-white text-black  shadow-lg">
+        <div className="md:hidden mt-4 flex flex-col w-full space-y-4 px-6 py-4  text-white  shadow-lg">
           <Link href="/" className="hover:opacity-70">
             Home
           </Link>
           <Link href="/about" className="hover:opacity-70">
             About
           </Link>
-          <a href="#services" className="hover:opacity-70">
+          <Link href="/services" className="hover:opacity-70">
             Services
-          </a>
+          </Link>
           <Link href="/projects" className="hover:opacity-70">
             Projects
           </Link>
