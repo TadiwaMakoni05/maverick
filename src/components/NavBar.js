@@ -25,7 +25,9 @@ const NavBar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 w-full z-50 p-6 transition-all duration-300 ${
-        isScrolled ? "bg-black/40 text-white shadow-md" : "bg-white text-black"
+        isScrolled
+          ? "bg-white text-black shadow-md"
+          : "bg-transparent text-white"
       }`}
     >
       <div className="container mx-auto flex justify-between items-center">
@@ -57,7 +59,10 @@ const NavBar = () => {
       </div>
 
       {isOpen && (
-        <div className="md:hidden mt-4 flex flex-col w-full space-y-4 px-6 py-4  text-white  shadow-lg">
+        <div
+          className={`md:hidden mt-4 flex flex-col w-full space-y-4 px-6 py-4 shadow-lg transition-colors duration-300
+      ${isScrolled ? "bg-white text-black" : "bg-black/40 text-white"}`}
+        >
           <Link href="/" className="hover:opacity-70">
             Home
           </Link>
